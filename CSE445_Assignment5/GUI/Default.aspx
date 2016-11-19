@@ -18,16 +18,142 @@
             <asp:Button ID="staff_button" runat="server" Text="Staff >>" style="margin-bottom:10px; margin-top:20px; padding-right:50px; text-align:center;" CssClass="btn btn-primary btn-lg" OnClick="staff_button_Click"/>
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-4">
-            <h2>Kyle</h2>
-            <ul>
-                <li>Default Page with Directory</li>
-                <li>Redirection/Authorization of all pages using Cookies.</li>
-                <li>Login, Logout, and Register components</li>
-                <li>Weather Service</li>
-            </ul>
+    <div class="row" style="margin-top:30px;">
+        <div class="col-md-12">
+          <h1>Group 14 Web app Services & Controls</h1>
+          <h4>This page is deployed at: <a href="">TODO: add link here once link is determined</a></h4>
+          <h4>This project is developed By: Kyle Ferguson, Nguyen Dao, and Khalid Rast</h4>
         </div>
 
     </div>
+      <table id="service_table" style="border: 1px solid black;">
+      <tbody><tr style="border: 1px solid black; background-color: gray; color: white;">
+        <th style="border-left: 1px solid black; border-right: 1px solid black;">Provider Name</th>
+        <th style="border-left: 1px solid black; border-right: 1px solid black;">Service Name with output types</th>
+        <th style="border-left: 1px solid black; border-right: 1px solid black;">TryIt Link</th>
+        <th style="border-left: 1px solid black; border-right: 1px solid black;">Service Description</th>
+        <th style="border-left: 1px solid black; border-right: 1px solid black;">Type</th>
+      </tr>
+      <tr style="border: 1px solid black;">
+        <td style="border: 1px solid black;">Kyle Ferguson</td>
+        <td style="border: 1px solid black;"><span style="font-size: 1.2em;">
+          <b>SignIn Component</b></span>:
+          <br>
+            <b>input:</b><br>
+            username:String<br>
+            password:String<br>
+            <b>output:</b>void<br>
+        </td>
+        <td style="border: 1px solid black;">To test, make sure you are logged out. Then click the "Members" or "Staff" button. You will be redirected to a signin page at which point you can test it.</td>
+        <td style="border: 1px solid black;">
+          This user component makes creating a signin sheet a breeze. The Component has a username and password textbox input with a signin and register button. When implemented into a page
+          an application builder just has to write login and register handlers and subscribe them to the component's login event and register event. This allows developers to customize the functionality of
+          this component any way they please.
+        </td>
+        <td style="border: 1px solid black;">
+          User Control Component.
+        </td>
+      </tr>
+
+      <tr style="border: 1px solid black;">
+        <td style="border: 1px solid black;">Kyle Ferguson</td>
+        <td style="border: 1px solid black;"><span style="font-size: 1.2em;">
+          <b>Logout Component</b></span>:
+          <br>
+            <b>input:</b><br>
+            ClickEvent<br>
+            <b>output:</b>void<br>
+        </td>
+        <td style="border: 1px solid black;">To test, make sure you are logged in as either a Member or a Staff Member. Then click the logout button at the top of the page (any page). You will be logged out and redirected to the Default page.</td>
+        <td style="border: 1px solid black;">
+          This user component makes creating a logout function a breeze. The Component has a single logout button. When implemented into a page an application builder just has to write a
+          logout handler and subscribe them to the component's logout event. This allows developers to customize the functionality of this component any way they please.
+        </td>
+        <td style="border: 1px solid black;">
+          User Control Component.
+        </td>
+      </tr>
+
+      <tr style="border: 1px solid black;">
+        <td style="border: 1px solid black;">Kyle Ferguson</td>
+        <td style="border: 1px solid black;"><span style="font-size: 1.2em;">
+          <b>Register Component</b></span>:
+          <br>
+          <b>input:</b><br>
+          username:String<br>
+          password:String<br>
+          passwordConfirm:String<br>
+          <b>output:</b>void<br>
+        </td>
+        <td style="border: 1px solid black;">
+          To test, make sure you are logged out. Then click the "Members" or "Staff" button. You will be redirected to a signin page at which point you will press the Register button from the signin component.
+          You will then be redirected to the Respective Member type's register page at which point you can test the Register Component.
+        </td>
+        <td style="border: 1px solid black;">
+          This user component makes creating a register sheet a breeze. The Component has a username, password, and confirm password (for verification functionality) textbox input with a register button. When implemented into a page
+          an application builder just has to write aregister handler and subscribe them to the component's register event. This allows developers to customize the functionality of
+          this component any way they please.
+        </td>
+        <td style="border: 1px solid black;">
+          User Control Component.
+        </td>
+      </tr>
+
+      <tr>
+        <td style="border: 1px solid black;">Kyle Ferguson</td>
+        <td style="border: 1px solid black;"><span style="font-size: 1.2em;"><b>Weather Service</b></span>:
+        <br><b>getCurrentConditions:</b><br><b>input:</b><br>location:String<br><b>output:</b><br>location:String<br>conditionLabel:String<br>currentTemp:Double<br>
+        <br><b>getForeCast:</b><br><b>input:</b><br>location:String<br><b>output:</b><br>forecast:List&lt;Conditions&gt;</td>
+        <td style="border: 1px solid black;"><a href="http://webstrar26.fulton.asu.edu/page2/WeatherServiceTryIt.aspx">http://webstrar26.fulton.asu.edu/page2/WeatherServiceTryIt.aspx</a></td>
+        <td style="border: 1px solid black;">
+          <b>getCurrentConditions</b><br>Given a location name, grabs the current tempurature, the condition label (i.e. sunny, cloudy, etc.) and location name.<br>
+          <b>getForeCast</b><br>Given a location name, gets a list of 10 Conditions objects which, by contract hold expected low,avg, and high temperatures, expected condition label, and date.
+        </td>
+        <td style="border: 1px solid black;">
+          Web Service (Created by Kyle Ferguson) from Assignment 3.
+          <!--Weather data is pulled and parsed from Yahoo's query service yql <a href="https://developer.yahoo.com/yql/">https://developer.yahoo.com/yql/</a>-->
+        </td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid black;">Kyle Ferguson</td>
+        <td style="border: 1px solid black;"><span style="font-size: 1.2em;">
+          <b>Redirection and Access Control component via Cookies</b></span>:
+          <br>
+          A Cookie from the Client. (Why one must use "Request" to access potential values in it).
+        </td>
+        <td style="border: 1px solid black;">
+          To Test the Cookie Redirection and Access Control, navigate through our website both as a Guest and as a User to see the full range of the control.
+        </td>
+        <td style="border: 1px solid black;">
+          This control is a control feature used throughout the web application and is used to redirect users based on the access/authentication of the user. That is, if a user is not signed in, they will be
+          redirected to the signin page of the respective page the user attempted to access. If the user IS signed in, the control allows the user to proceed to the page they were attempting to access.
+          This project assumes the user allows Cookies in their browser. If Cookies are not enabled, users guest or otherwise, will not be able to access their accounts.
+        </td>
+        <td style="border: 1px solid black;">
+          Server Control Component.
+        </td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid black;">Kyle Ferguson</td>
+        <td style="border: 1px solid black;"><span style="font-size: 1.2em;">
+          <b>Default page</b></span>:
+          <br>
+          <b>input:</b><br>
+          Click Events By User<br>
+          <b>output:</b><br>
+          void<br>
+        </td>
+        <td style="border: 1px solid black;">
+          To test the Default page, regardless of the page you are on, simply click on the home button which will take you to the Default page. From there, you can click the various buttons to use the page.
+        </td>
+        <td style="border: 1px solid black;">
+          The Default page is the landing page for the Location Services web application. This page allows users to navigate to the Members page or the staff page. Furthermore, they can view a service directory that outlines
+          the component and web services that the developers created to build out the Location Services Web App.
+        </td>
+        <td style="border: 1px solid black;">
+          Web Page.
+        </td>
+      </tr>
+	   
+  </tbody></table>
 </asp:Content>
