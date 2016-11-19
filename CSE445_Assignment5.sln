@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSE445_Assignment5", "CSE445_Assignment5\CSE445_Assignment5.csproj", "{3CC408E4-A323-44A5-B0FE-172F87D4C277}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptionLibrary", "ourLibrary\CryptionLibrary.csproj", "{4190EED5-1393-4768-BC43-3E070632B3A1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeamLibrary", "ourLibrary\TeamLibrary.csproj", "{4190EED5-1393-4768-BC43-3E070632B3A1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

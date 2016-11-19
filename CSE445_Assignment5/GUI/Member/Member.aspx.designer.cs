@@ -7,9 +7,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CSE445_Assignment5 {
+namespace CSE445_Assignment5.GUI.Member {
     
     
-    public partial class _Default {
+    public partial class Member {
     }
 }

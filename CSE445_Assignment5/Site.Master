@@ -1,5 +1,8 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="CSE445_Assignment5.SiteMaster" %>
 
+<%@ Register Src="~/components/Logout.ascx" TagPrefix="uc1" TagName="Logout" %>
+
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -50,15 +53,14 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/">Home</a></li>
-                        <li><a runat="server" href="~/About">About</a></li>
-                        <li><a runat="server" href="~/Contact">Contact</a></li>
+                        <li><a runat="server" href="~/GUI/">Home</a></li>
+                        <li>
+                            <uc1:Logout runat="server" ID="Logout" />  </li>
                     </ul>
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
                             <ul class="nav navbar-nav navbar-right">
-                                <li><a runat="server" href="~/Account/Register">Register</a></li>
-                                <li><a runat="server" href="~/Account/Login">Log in</a></li>
+
                             </ul>
                         </AnonymousTemplate>
                         <LoggedInTemplate>

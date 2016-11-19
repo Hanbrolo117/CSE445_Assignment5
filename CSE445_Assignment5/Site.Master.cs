@@ -69,12 +69,21 @@ namespace CSE445_Assignment5
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            this.Logout.subscribeToLogoutButton(this.LogoutHandler);
+        }
 
+
+        public void LogoutHandler(string membertype, EventArgs e) {
+            Response.Redirect("~/GUI/");
         }
 
         protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)
         {
             Context.GetOwinContext().Authentication.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
+        }
+
+          protected void logoutButton_Click(object sender, EventArgs e){
+            Response.Redirect("StaffRegister");
         }
     }
 

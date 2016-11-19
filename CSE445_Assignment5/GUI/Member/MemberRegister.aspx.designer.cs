@@ -7,27 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CSE445_Assignment5 {
+namespace CSE445_Assignment5.GUI.Member {
     
     
-    public partial class StaffLogin {
+    public partial class MemberRegister {
         
         /// <summary>
-        /// signIn control.
+        /// Register control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::CSE445_Assignment5.signIn signIn;
-        
-        /// <summary>
-        /// alert control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label alert;
+        protected global::CSE445_Assignment5.Register Register;
     }
 }

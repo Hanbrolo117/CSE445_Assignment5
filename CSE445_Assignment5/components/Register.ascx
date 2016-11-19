@@ -16,5 +16,5 @@
     <asp:TextBox ID="password_confirm_input" TextMode="Password" runat="server" style="margin-top:15px;" ></asp:TextBox>
     <br />
  
-    <asp:Button ID="register_event" runat="server" Text="Register" style="margin-bottom:10px; margin-top:20px; padding-right:50px;" OnClick="register_event_Click" />
+    <asp:Button ID="register_event" runat="server" Text="Register" style="margin-bottom:10px; margin-top:20px; padding-right:50px; text-align:center;" OnClick="register_event_Click" />
 </div>

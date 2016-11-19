@@ -6,21 +6,27 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.IO;
 using System.Xml;
-using CryptionLibrary;
+using TeamLibrary;
 
-namespace CSE445_Assignment5
+namespace CSE445_Assignment5.GUI
 {
     public partial class StaffLogin : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Request.Cookies["staffMember"] != null)
+            {
+                Response.Redirect("Staff");
+            }
             this.signIn.subscribeToLoginButton(this.LoginHandler);
             this.signIn.subscribeToRegisterButton(this.RegisterHandler);
         }
 
         public void LoginHandler(string username, string password, EventArgs e)
         {
-            /*string fLocation = Path.Combine(HttpRuntime.AppDomainAppPath, @"App_Data\Staff.xml");
+            //TODO:: ENCRYPT PASSWORD BEFORE COMPARISON
+
+            string fLocation = Path.Combine(HttpRuntime.AppDomainAppPath, @"App_Data\Staff.xml");
             XmlNode node = XMLProccess.findUser(fLocation, username);
             if (node == null)
             {
@@ -31,12 +37,21 @@ namespace CSE445_Assignment5
                 alert.Text = "wrong Password";
             }
             else
-                alert.Text = "Login Sucess!";  */
+            {
+                //Create A login Cookie for managing the session:
+                HttpCookie loginCookie = new HttpCookie("staffMember");//Create Staff Cookie.
+                loginCookie["username"] = username;//Set Staff Cookie username.
+                loginCookie.Expires = DateTime.Now.AddMonths(1);//Set Cookie Expiration for 1 month.
+                Response.Cookies.Add(loginCookie);
+
+                alert.Text = "Login Sucess!";
+                Response.Redirect("Staff");
+            }
         }
 
         public void RegisterHandler(string username, string password, EventArgs e)
         {
-            this.alert.Text = string.Format("Registering! username: {0} | password: {1}", username, password);
+            Response.Redirect("StaffRegister");
         }
     }
 }

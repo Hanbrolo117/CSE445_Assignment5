@@ -5,13 +5,15 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace CSE445_Assignment5.Staff
+namespace CSE445_Assignment5.GUI.Member
 {
-    public partial class StaffLogin : System.Web.UI.Page
+    public partial class Member : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Request.Cookies["member"] == null) {
+                Response.Redirect("MemberLogin.aspx");
+            }
         }
     }
 }
