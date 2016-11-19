@@ -4,7 +4,7 @@
     <h3>Register</h3>
     <hr />
 
-    <asp:Label ID="username_label" runat="server" Text="Login:" style="margin-right:10px;"></asp:Label>
+    <asp:Label ID="username_label" runat="server" Text="Username:" style="margin-right:10px;"></asp:Label>
     <asp:TextBox ID="username_input" runat="server" style="margin-top:15px;"></asp:TextBox>
     <br />
 
@@ -16,12 +16,5 @@
     <asp:TextBox ID="password_confirm_input" TextMode="Password" runat="server" style="margin-top:15px;" ></asp:TextBox>
     <br />
  
-
-    <asp:Label ID="var1" runat="server" Text="" Visible="false" style="margin-right:10px;"></asp:Label>
-    <asp:Label ID="var2" runat="server" Text="" Visible="false" style="margin-right:10px;"></asp:Label>
-
-    <asp:Label ID="verify_label" runat="server" Text="Confirm Password:" style="margin-right:10px;"></asp:Label>
-    <asp:TextBox ID="verify_input" TextMode="Number" runat="server" style="margin-top:15px;" ></asp:TextBox>
-    <br />
     <asp:Button ID="register_event" runat="server" Text="Register" style="margin-bottom:10px; margin-top:20px; padding-right:50px; text-align:center;" OnClick="register_event_Click" />
 </div>

@@ -67,42 +67,6 @@ namespace CSE445_Assignment5 {
         protected global::System.Web.UI.WebControls.TextBox password_confirm_input;
         
         /// <summary>
-        /// var1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label var1;
-        
-        /// <summary>
-        /// var2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label var2;
-        
-        /// <summary>
-        /// verify_label control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label verify_label;
-        
-        /// <summary>
-        /// verify_input control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox verify_input;
-        
-        /// <summary>
         /// register_event control.
         /// </summary>
         /// <remarks>
