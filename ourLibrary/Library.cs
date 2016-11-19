@@ -130,7 +130,32 @@ namespace TeamLibrary
     public class XMLProccess
     {
 
-        public static XmlNode findUser(string XMLPath, string username)
+        public static XmlNode findMemberUser(string XMLPath, string username)
+        {
+            FileStream fs = null;
+            XmlNode node = null;
+            try
+            {
+                if (File.Exists(XMLPath))
+                {
+                    fs = new FileStream(XMLPath, FileMode.Open, FileAccess.Read);
+                    XmlDocument xd = new XmlDocument();
+                    xd.Load(fs);
+                    fs.Close();
+                    node = xd["Members"];
+                    node = node.SelectSingleNode("descendant::user/userName[text()='" + username + "']");
+                    if (node != null)
+                        node = node.ParentNode;
+                }
+            }
+            finally
+            {
+                fs.Close();
+            }
+            return node;
+        }
+
+        public static XmlNode findStaffUser(string XMLPath, string username)
         {
             FileStream fs = null;
             XmlNode node = null;

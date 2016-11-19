@@ -51,7 +51,17 @@ namespace CSE445_Assignment5
             }
 
             //Emit Register Event to subscribers:
-            this.register_instance(username, password, e);
+            if (this.register_event != null)
+            {
+                try
+                {
+                    this.register_instance(username, password, e);
+                }
+                catch (Exception) {
+
+                }
+            }
+  
         }
     }
 }

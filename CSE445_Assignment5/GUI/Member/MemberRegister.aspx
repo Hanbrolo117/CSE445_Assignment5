@@ -8,5 +8,5 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <uc1:Register runat="server" id="Register" />
-
+    <asp:Label ID="alert" runat="server" Text="Waiting for event to happen." style="margin-right:10px;"></asp:Label>
 </asp:Content>

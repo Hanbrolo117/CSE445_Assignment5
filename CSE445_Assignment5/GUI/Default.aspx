@@ -15,8 +15,19 @@
             <asp:Button ID="member_button" runat="server" Text="Members >>" style="margin-bottom:10px; margin-top:20px; padding-right:50px; text-align:center;" CssClass="btn btn-primary btn-lg" OnClick="member_button_Click"/>
         </div>
         <div class="col-md-4">
-            <asp:Button ID="Button1" runat="server" Text="Staff >>" style="margin-bottom:10px; margin-top:20px; padding-right:50px; text-align:center;" CssClass="btn btn-primary btn-lg" OnClick="Button1_Click"/>
+            <asp:Button ID="staff_button" runat="server" Text="Staff >>" style="margin-bottom:10px; margin-top:20px; padding-right:50px; text-align:center;" CssClass="btn btn-primary btn-lg" OnClick="staff_button_Click"/>
         </div>
     </div>
+    <div class="row">
+        <div class="col-md-4">
+            <h2>Kyle</h2>
+            <ul>
+                <li>Default Page with Directory</li>
+                <li>Redirection/Authorization of all pages using Cookies.</li>
+                <li>Login, Logout, and Register components</li>
+                <li>Weather Service</li>
+            </ul>
+        </div>
 
+    </div>
 </asp:Content>

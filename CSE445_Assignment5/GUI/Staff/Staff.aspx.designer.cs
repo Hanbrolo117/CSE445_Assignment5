@@ -13,15 +13,6 @@ namespace CSE445_Assignment5.Staff {
     public partial class Staff {
         
         /// <summary>
-        /// Logout control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::CSE445_Assignment5.components.Logout Logout;
-        
-        /// <summary>
         /// Label1 control.
         /// </summary>
         /// <remarks>

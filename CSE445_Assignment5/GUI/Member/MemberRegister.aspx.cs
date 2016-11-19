@@ -15,6 +15,28 @@ namespace CSE445_Assignment5.GUI.Member
             {
                 Response.Redirect("Member.aspx");
             }
+            this.Register.subscribeToRegisterButton(this.RegisterHandler);
         }
+
+
+        public void RegisterHandler(string username, string password, string confirmPassword, EventArgs e) {
+            if (password.Equals(confirmPassword))
+            {
+                string encryptedPassword = TeamLibrary.Crypto.encryption(password);
+                //Insert New User:
+                //Create A login Cookie for managing the session:
+                HttpCookie loginCookie = new HttpCookie("member");//Create Staff Cookie.
+                loginCookie["username"] = username;//Set Staff Cookie username.
+                loginCookie.Expires = DateTime.Now.AddMonths(1);//Set Cookie Expiration for 1 month.
+                Response.Cookies.Add(loginCookie);
+
+                alert.Text = "Login Sucess!";
+                Response.Redirect("Member");
+            }
+            else {
+                alert.Text = "Passwords did not match!";
+            }
+        }
+
     }
 }

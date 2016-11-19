@@ -27,7 +27,7 @@ namespace CSE445_Assignment5.GUI
             //TODO:: ENCRYPT PASSWORD BEFORE COMPARISON
 
             string fLocation = Path.Combine(HttpRuntime.AppDomainAppPath, @"App_Data\Staff.xml");
-            XmlNode node = XMLProccess.findUser(fLocation, username);
+            XmlNode node = XMLProccess.findStaffUser(fLocation, username);
             if (node == null)
             {
                 alert.Text = "User does not exist";

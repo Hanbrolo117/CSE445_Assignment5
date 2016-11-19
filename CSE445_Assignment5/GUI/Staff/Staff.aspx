@@ -1,12 +1,10 @@
 ﻿<%@ Page Title="Contact" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Staff.aspx.cs" Inherits="CSE445_Assignment5.Staff.Staff" %>
 
-<%@ Register Src="~/components/Logout.ascx" TagPrefix="uc1" TagName="Logout" %>
 
 
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <div>
-        <uc1:Logout runat="server" ID="Logout" />
         <br/>
         <asp:Label ID="Label1" runat="server" Text="Staff user list:"></asp:Label>
         <br />

@@ -11,7 +11,7 @@ namespace CSE445_Assignment5
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            this.Logout.subscribeToLogoutButton(this.logoutHandler);
+
         }
 
         public void logoutHandler(string memberType, EventArgs e) {
@@ -21,12 +21,17 @@ namespace CSE445_Assignment5
 
         protected void member_button_Click(object sender, EventArgs e)
         {
-            if ((Session["username"] != null) && (Session["password"] != null)) {
-
+            if ((Session["username"] != null) && (Session["password"] != null))
+            {
+                Response.Redirect("Member/Member");
+            }
+            else
+            {
+                Response.Redirect("Member/MemberLogin");
             }
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void staff_button_Click(object sender, EventArgs e)
         {
             if ((Session["username"] != null) && (Session["password"] != null))
             {
