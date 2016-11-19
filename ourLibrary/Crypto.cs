@@ -11,19 +11,15 @@ namespace CryptionLibrary
 {
      public class Crypto 
      {
-        private byte[] key;
-        private byte[] iv;
+        private static byte[] key = Encoding.UTF8.GetBytes("7sdfasdfasdfasdfasdfasdfasdfasd7");
+        private static byte[] iv = Encoding.UTF8.GetBytes("1quinnzxcasdqwe1");
 
         public Crypto()
         {
-            //Set up Default 32-Byte Key:
-            this.key = Encoding.UTF8.GetBytes("7sdfasdfasdfasdfasdfasdfasdfasd7");
 
-            //Set up Default 16-Byte Initialization Vector:
-            this.iv = Encoding.UTF8.GetBytes("1quinnzxcasdqwe1");
         }
 
-        public String encryption(string plainText)
+        public static String encryption(string plainText)
         {
             //Initial Setup:
             //------------------------------------------------------------------------------------------------------------------
@@ -34,8 +30,8 @@ namespace CryptionLibrary
             //Do Initial Error Checking before encryption:
             //------------------------------------------------------------------------------------------------------------------
             if (plainText == null || plainText.Length <= 0) { throw new ArgumentException("plaintext"); }
-            if (this.key == null || this.key.Length <= 0) { throw new ArgumentException("key"); }
-            if (this.iv == null || this.iv.Length <= 0) { throw new ArgumentException("iv"); }
+            if (key == null || key.Length <= 0) { throw new ArgumentException("key"); }
+            if (iv == null || iv.Length <= 0) { throw new ArgumentException("iv"); }
             //------------------------------------------------------------------------------------------------------------------
 
 
@@ -49,8 +45,8 @@ namespace CryptionLibrary
             //------------------------------------------------------------------------------------------------------------------
             using (Rijndael rij = Rijndael.Create())
             {
-                rij.Key = this.key;
-                rij.IV = this.iv;
+                rij.Key = key;
+                rij.IV = iv;
 
                 ICryptoTransform encryptor = rij.CreateEncryptor(rij.Key, rij.IV);
 
@@ -82,7 +78,7 @@ namespace CryptionLibrary
         }//END OF ENCRYPTION FUNCTION.
 
 
-        public String decryption(string ciphertext)
+        public static String decryption(string ciphertext)
         {
             //Initial setup:
             //------------------------------------------------------------------------------------------------------------------
@@ -95,8 +91,8 @@ namespace CryptionLibrary
             //Do Initial Error Checking before encryption:
             //------------------------------------------------------------------------------------------------------------------
             if (ciphertext == null || ciphertext.Length <= 0) { throw new ArgumentException("ciphertext"); }
-            if (this.key == null || this.key.Length <= 0) { throw new ArgumentException("key"); }
-            if (this.iv == null || this.iv.Length <= 0) { throw new ArgumentException("iv"); }
+            if (key == null || key.Length <= 0) { throw new ArgumentException("key"); }
+            if (iv == null || iv.Length <= 0) { throw new ArgumentException("iv"); }
             //------------------------------------------------------------------------------------------------------------------
 
 
@@ -104,8 +100,8 @@ namespace CryptionLibrary
             //------------------------------------------------------------------------------------------------------------------
             using (Rijndael rij = Rijndael.Create())
             {
-                rij.Key = this.key;
-                rij.IV = this.iv;
+                rij.Key = key;
+                rij.IV = iv;
 
                 ICryptoTransform decryptor = rij.CreateDecryptor(rij.Key, rij.IV);
 
