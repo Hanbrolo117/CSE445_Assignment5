@@ -104,7 +104,11 @@
         <td style="border: 1px solid black;"><span style="font-size: 1.2em;"><b>Weather Service</b></span>:
         <br><b>getCurrentConditions:</b><br><b>input:</b><br>location:String<br><b>output:</b><br>location:String<br>conditionLabel:String<br>currentTemp:Double<br>
         <br><b>getForeCast:</b><br><b>input:</b><br>location:String<br><b>output:</b><br>forecast:List&lt;Conditions&gt;</td>
-        <td style="border: 1px solid black;"><a href="http://webstrar26.fulton.asu.edu/page2/WeatherServiceTryIt.aspx">http://webstrar26.fulton.asu.edu/page2/WeatherServiceTryIt.aspx</a></td>
+        <td style="border: 1px solid black;">
+            <a href="http://webstrar26.fulton.asu.edu/page2/WeatherServiceTryIt.aspx">http://webstrar26.fulton.asu.edu/page2/WeatherServiceTryIt.aspx</a>
+            <br>
+            Alternatively, sigin as a Member or Staff member and use the service on the member/staff member page.
+        </td>
         <td style="border: 1px solid black;">
           <b>getCurrentConditions</b><br>Given a location name, grabs the current tempurature, the condition label (i.e. sunny, cloudy, etc.) and location name.<br>
           <b>getForeCast</b><br>Given a location name, gets a list of 10 Conditions objects which, by contract hold expected low,avg, and high temperatures, expected condition label, and date.
@@ -158,12 +162,16 @@
             <td style="border: 1px solid black;">Khalid Rast</td>
             <td style="border: 1px solid black;"><span style="font-size: 1.2em;"><b>Alternative Fuel Stations Services</b></span>:
               <br><b>input:</b><br>city:string<br>state:string<br><b>output:</b><br>e85stations:string<br>
-            <td style="border: 1px solid black;"><a href="http://group14.mobicloud.asu.edu/page1/AltFuel.aspx">http://group14.mobicloud.asu.edu/page1/AltFuel.aspx</a></td>
+            <td style="border: 1px solid black;">
+                <a href="http://group14.mobicloud.asu.edu/page1/AltFuel.aspx">http://group14.mobicloud.asu.edu/page1/AltFuel.aspx</a>
+                <br>
+                Alternatively, sigin as a Member or Staff member and use the service on the member/staff member page.
+            </td>
             <td style="border: 1px solid black;">
               <b>getE85</b><br>Calculates how many E85 stations there are in a given city and state.<br>
             </td>
             <td style="border: 1px solid black;">
-              Data taken from data.gov: <a href="https://api.data.gov/nrel/alt-fuel-stations/v1">https://api.data.gov/nrel/alt-fuel-stations/v1</a>
+                Web Page
             </td>
       </tr>
   </tbody></table>

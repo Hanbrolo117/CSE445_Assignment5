@@ -39,9 +39,8 @@
 
             <br />
             <asp:PlaceHolder ID="forecast_place_holder" runat="server"></asp:PlaceHolder>
-        </div>
 
-        <div id="form1" runat="server">
+        <div id="form1" style="margin-top:50px;" runat="server">
             <div>
                 <div>
                     <h4 ID="H4" runat="server" Text="Alternative Fuel Stations" style="margin-bottom:10px; margin-top:20px; padding-right:50px;">Alternative Fuel Stations</h4>
@@ -57,6 +56,10 @@
             </div>
                 <asp:Button ID="ProcessButton" runat="server" Text="Process" OnClick="ProcessButton_Click" />
         </div>
+
+        </div>
+
+
 
     </div>
 
