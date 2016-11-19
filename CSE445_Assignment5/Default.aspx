@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="CSE445_Assignment5._Default" %>
 
+<%@ Register Src="~/signIn.ascx" TagPrefix="uc1" TagName="signIn" %>
+
+
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="jumbotron">
@@ -38,5 +41,7 @@
             </p>
         </div>
     </div>
-
+    <uc1:signIn runat="server" ID="signIn" />
+    <asp:Label ID="lor" runat="server" Text="Waiting for event to happen." style="margin-right:10px;"></asp:Label>
+    <asp:Label ID="cryptTest" runat="server" Text="Waiting for event to happen." style="margin-right:10px;"></asp:Label>
 </asp:Content>
