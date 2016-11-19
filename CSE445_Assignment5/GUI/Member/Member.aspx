@@ -55,7 +55,7 @@
                 <asp:TextBox ID="StationsTextBox" runat="server"></asp:TextBox>
     
             </div>
-                <asp:Button ID="ProcessButton" runat="server" Text="Process" />
+                <asp:Button ID="ProcessButton" runat="server" Text="Process" OnClick="ProcessButton_Click" />
         </div>
 
     </div>
