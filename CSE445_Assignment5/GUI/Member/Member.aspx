@@ -40,6 +40,7 @@
             <br />
             <asp:PlaceHolder ID="forecast_place_holder" runat="server"></asp:PlaceHolder>
         </div>
+
         <div id="form1" runat="server">
             <div>
                 <div>
@@ -56,6 +57,7 @@
             </div>
                 <asp:Button ID="ProcessButton" runat="server" Text="Process" />
         </div>
+
     </div>
 
 </asp:Content>

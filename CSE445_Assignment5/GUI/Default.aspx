@@ -154,6 +154,17 @@
           Web Page.
         </td>
       </tr>
-	   
+      <tr style="border: 1px solid black;">
+            <td style="border: 1px solid black;">Khalid Rast</td>
+            <td style="border: 1px solid black;"><span style="font-size: 1.2em;"><b>Alternative Fuel Stations Services</b></span>:
+              <br><b>input:</b><br>city:string<br>state:string<br><b>output:</b><br>e85stations:string<br>
+            <td style="border: 1px solid black;"><a href="http://group14.mobicloud.asu.edu/page1/AltFuel.aspx">http://group14.mobicloud.asu.edu/page1/AltFuel.aspx</a></td>
+            <td style="border: 1px solid black;">
+              <b>getE85</b><br>Calculates how many E85 stations there are in a given city and state.<br>
+            </td>
+            <td style="border: 1px solid black;">
+              Data taken from data.gov: <a href="https://api.data.gov/nrel/alt-fuel-stations/v1">https://api.data.gov/nrel/alt-fuel-stations/v1</a>
+            </td>
+      </tr>
   </tbody></table>
 </asp:Content>
