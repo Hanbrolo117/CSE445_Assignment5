@@ -40,22 +40,22 @@
             <br />
             <asp:PlaceHolder ID="forecast_place_holder" runat="server"></asp:PlaceHolder>
         </div>
-         <form id="form1" runat="server">
-    <div>
-        <div>
-            <h4 ID="H4" runat="server" Text="Alternative Fuel Stations" style="margin-bottom:10px; margin-top:20px; padding-right:50px;">Alternative Fuel Stations</h4>
+        <div id="form1" runat="server">
+            <div>
+                <div>
+                    <h4 ID="H4" runat="server" Text="Alternative Fuel Stations" style="margin-bottom:10px; margin-top:20px; padding-right:50px;">Alternative Fuel Stations</h4>
+                </div>
+                <asp:Label ID="Label2" runat="server" Text="City:"></asp:Label>
+                <asp:TextBox ID="CityTextBox" runat="server" ></asp:TextBox>
+                <asp:Label ID="Label3" runat="server" Text="State:"></asp:Label>
+                <asp:TextBox ID="StateTextBox" runat="server"></asp:TextBox>
+    
+                <asp:Label ID="Label4" runat="server" Text="Number of E85 Stations:"></asp:Label>
+                <asp:TextBox ID="StationsTextBox" runat="server"></asp:TextBox>
+    
+            </div>
+                <asp:Button ID="ProcessButton" runat="server" Text="Process" />
         </div>
-        <asp:Label ID="Label2" runat="server" Text="City:"></asp:Label>
-        <asp:TextBox ID="CityTextBox" runat="server" ></asp:TextBox>
-        <asp:Label ID="Label3" runat="server" Text="State:"></asp:Label>
-        <asp:TextBox ID="StateTextBox" runat="server"></asp:TextBox>
-    
-        <asp:Label ID="Label4" runat="server" Text="Number of E85 Stations:"></asp:Label>
-        <asp:TextBox ID="StationsTextBox" runat="server"></asp:TextBox>
-    
-    </div>
-        <asp:Button ID="ProcessButton" runat="server" Text="Process" />
-    </form>
     </div>
 
 </asp:Content>
