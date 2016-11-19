@@ -81,6 +81,8 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
@@ -254,6 +256,15 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="components\signIn.ascx" />
+    <None Include="Service References\WeatherService\configuration91.svcinfo" />
+    <None Include="Service References\WeatherService\configuration.svcinfo" />
+    <Content Include="Service References\WeatherService\CSE445_Assignment5.WeatherService.Conditions.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\WeatherService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Site.Master" />
     <Content Include="GUI\Staff\Staff.aspx" />
     <Content Include="ViewSwitcher.ascx" />
@@ -263,6 +274,16 @@
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Site.Mobile.Master" />
+    <None Include="Service References\WeatherService\WeatherService.wsdl" />
+    <None Include="Service References\WeatherService\WeatherService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WeatherService\WeatherService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WeatherService\WeatherService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -462,6 +483,11 @@
     <Compile Include="components\signIn.ascx.designer.cs">
       <DependentUpon>signIn.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Service References\WeatherService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -492,7 +518,9 @@
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\WeatherService\" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ourLibrary\TeamLibrary.csproj">
       <Project>{4190eed5-1393-4768-bc43-3e070632b3a1}</Project>

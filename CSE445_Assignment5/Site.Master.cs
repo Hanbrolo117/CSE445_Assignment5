@@ -76,6 +76,12 @@ namespace CSE445_Assignment5
         public void LogoutHandler(string membertype, EventArgs e) {
             Response.Redirect("~/GUI/");
         }
+        
+        protected void home_button_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/GUI/");
+        }
+
 
         protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)
         {
