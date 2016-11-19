@@ -46,15 +46,15 @@
             <h4 ID="H4" runat="server" Text="Alternative Fuel Stations" style="margin-bottom:10px; margin-top:20px; padding-right:50px;">Alternative Fuel Stations</h4>
         </div>
         <asp:Label ID="Label2" runat="server" Text="City:"></asp:Label>
-        <asp:TextBox ID="TextBox1" runat="server" OnTextChanged="TextBox1_TextChanged"></asp:TextBox>
+        <asp:TextBox ID="CityTextBox" runat="server" ></asp:TextBox>
         <asp:Label ID="Label3" runat="server" Text="State:"></asp:Label>
-        <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+        <asp:TextBox ID="StateTextBox" runat="server"></asp:TextBox>
     
         <asp:Label ID="Label4" runat="server" Text="Number of E85 Stations:"></asp:Label>
-        <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+        <asp:TextBox ID="StationsTextBox" runat="server"></asp:TextBox>
     
     </div>
-        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Process" />
+        <asp:Button ID="ProcessButton" runat="server" Text="Process" />
     </form>
     </div>
 

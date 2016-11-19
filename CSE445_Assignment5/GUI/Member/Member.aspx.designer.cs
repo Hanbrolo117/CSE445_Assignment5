@@ -202,13 +202,13 @@ namespace CSE445_Assignment5.GUI.Member {
         protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
-        /// TextBox1 control.
+        /// CityTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox CityTextBox;
         
         /// <summary>
         /// Label3 control.
@@ -220,13 +220,13 @@ namespace CSE445_Assignment5.GUI.Member {
         protected global::System.Web.UI.WebControls.Label Label3;
         
         /// <summary>
-        /// TextBox2 control.
+        /// StateTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.TextBox StateTextBox;
         
         /// <summary>
         /// Label4 control.
@@ -238,21 +238,21 @@ namespace CSE445_Assignment5.GUI.Member {
         protected global::System.Web.UI.WebControls.Label Label4;
         
         /// <summary>
-        /// TextBox3 control.
+        /// StationsTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox3;
+        protected global::System.Web.UI.WebControls.TextBox StationsTextBox;
         
         /// <summary>
-        /// Button1 control.
+        /// ProcessButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button ProcessButton;
     }
 }
