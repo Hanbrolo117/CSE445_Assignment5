@@ -18,8 +18,8 @@ namespace CSE445_Assignment5
         {
             this.lor.Text = string.Format("Logged in! username: {0} | password: {1}", username, password);
             CryptionLibrary.Crypto encrypt = new CryptionLibrary.Crypto();
-            string cipertext = encrypt.encryption(password);
-            string plaintext = encrypt.decryption(cipertext);
+            string cipertext = CryptionLibrary.Crypto.encryption(password);
+            string plaintext = CryptionLibrary.Crypto.decryption(cipertext);
             this.cryptTest.Text = string.Format("Encrypted Password: {0} | Decrypted Password: {1}", cipertext, plaintext);
         }
 
