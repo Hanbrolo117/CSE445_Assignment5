@@ -256,8 +256,22 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="components\signIn.ascx" />
+    <None Include="Service References\AltFuelService\Service1.wsdl" />
+    <None Include="Service References\AltFuelService\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AltFuelService\Service11.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\WeatherService\configuration91.svcinfo" />
     <None Include="Service References\WeatherService\configuration.svcinfo" />
+    <None Include="Service References\AltFuelService\Service1.disco" />
+    <None Include="Service References\AltFuelService\configuration91.svcinfo" />
+    <None Include="Service References\AltFuelService\configuration.svcinfo" />
+    <None Include="Service References\AltFuelService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Service References\WeatherService\CSE445_Assignment5.WeatherService.Conditions.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -483,6 +497,11 @@
     <Compile Include="components\signIn.ascx.designer.cs">
       <DependentUpon>signIn.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Service References\AltFuelService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\WeatherService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -519,6 +538,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Service References\AltFuelService\" />
     <WCFMetadataStorage Include="Service References\WeatherService\" />
   </ItemGroup>
   <ItemGroup>

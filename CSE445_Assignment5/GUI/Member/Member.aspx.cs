@@ -78,5 +78,11 @@ namespace CSE445_Assignment5.GUI.Member
             }
         }
 
+        protected void ProcessButton_Click(object sender, EventArgs e)  //Processes Alt Fuel Service Request
+        {
+            AltFuelService.Service1Client altfuel = new AltFuelService.Service1Client();
+            StationsTextBox.Text = altfuel.ProcessResponse(CityTextBox.Text, StateTextBox.Text);
+
+        }
     }
 }
