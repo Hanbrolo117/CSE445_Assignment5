@@ -41,7 +41,5 @@
             </p>
         </div>
     </div>
-    <uc1:signIn runat="server" ID="signIn" />
-    <asp:Label ID="lor" runat="server" Text="Waiting for event to happen." style="margin-right:10px;"></asp:Label>
-    <asp:Label ID="cryptTest" runat="server" Text="Waiting for event to happen." style="margin-right:10px;"></asp:Label>
+
 </asp:Content>

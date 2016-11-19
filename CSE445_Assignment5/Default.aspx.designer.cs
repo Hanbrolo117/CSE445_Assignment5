@@ -11,32 +11,5 @@ namespace CSE445_Assignment5 {
     
     
     public partial class _Default {
-        
-        /// <summary>
-        /// signIn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::CSE445_Assignment5.signIn signIn;
-        
-        /// <summary>
-        /// lor control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lor;
-        
-        /// <summary>
-        /// cryptTest control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label cryptTest;
     }
 }
