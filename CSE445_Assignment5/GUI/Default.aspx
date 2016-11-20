@@ -5,7 +5,7 @@
     
     <div class="jumbotron">
         <h1>Location Data</h1>
-        <p class="lead">This is a Great Application for users to find important information of a location. Everything from local weather to local crime rates.</p>
+        <p class="lead">This is a Great Application for users to find important information of a location. Everything from local weather to local alternative fuel stations.</p>
         <p class="lead">If you are the Admin or a Staff Member, use your username an password to sign-in to use the application AND optionally add other staff members.</p>
         <p class="lead">If you are a Member or want to sign up as a member, just click on the Members button!!</p>
     </div>
