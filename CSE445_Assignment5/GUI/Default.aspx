@@ -174,5 +174,47 @@
                 Web Page
             </td>
       </tr>
+      <tr style="border: 1px solid black;">
+            <td style="border: 1px solid black;">Nguyen Dao</td>
+            <td style="border: 1px solid black;"><span style="font-size: 1.2em;"><b>XML process: get user list</b></span>:<br />
+                <strong>input:<br />
+                </strong>xmlPath:string<br />
+                <strong>output:</strong><br />
+                userList:string[]<td style="border: 1px solid black;">
+                In staff page, when the page load, the list of Staff will be generated</td>
+            <td style="border: 1px solid black;">
+                Return a list of users for user of the given xml</td>
+            <td style="border: 1px solid black;">
+                DLL Function</td>
+      </tr>
+      <tr style="border: 1px solid black;">
+            <td style="border: 1px solid black;">Nguyen<br />
+                Dao</td>
+            <td style="border: 1px solid black;"><span style="font-size: 1.2em;"><b>XML process: search user</b></span>:<br />
+                <strong>input:<br />
+                </strong>xmlPath: string<br />
+                userName:string<br />
+                <strong>output:</strong><br />
+                user: XmlNode<td style="border: 1px solid black;">
+                When loggin in, the usernam entered will be searched angainst the xml.</td>
+            <td style="border: 1px solid black;">
+                Return a xml node that contain username and password</td>
+            <td style="border: 1px solid black;">
+                DLL Fucntion</td>
+      </tr>
+      <tr style="border: 1px solid black;">
+            <td style="border: 1px solid black;">Nguyen Dao</td>
+            <td style="border: 1px solid black;"><span style="font-size: 1.2em;"><b>Celebrity Birthday Service</b></span>:<br />
+                <strong>input:<br />
+                </strong>date: string<br />
+                maxReturn: int<br />
+                <strong>output:</strong><br />
+                celebs: string[]<td style="border: 1px solid black;">
+                Tryit function in Member page</td>
+            <td style="border: 1px solid black;">
+                Return list of celebs born on give date</td>
+            <td style="border: 1px solid black;">
+                Web Service</td>
+      </tr>
   </tbody></table>
 </asp:Content>
