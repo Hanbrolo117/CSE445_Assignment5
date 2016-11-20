@@ -204,6 +204,21 @@
       </tr>
       <tr style="border: 1px solid black;">
             <td style="border: 1px solid black;">Nguyen Dao</td>
+            <td style="border: 1px solid black;"><span style="font-size: 1.2em;"><b>XML process: add user</b></span>:<br />
+                <strong>input:<br />
+                </strong>xmlPath: string<br />
+                userName:string<br />
+                password: string<br />
+                <strong>output:</strong><br />
+                void<td style="border: 1px solid black;">
+                Use register pages to add user to the xml database</td>
+            <td style="border: 1px solid black;">
+                Add a new user to the input xml</td>
+            <td style="border: 1px solid black;">
+                DLL Function</td>
+      </tr>
+      <tr style="border: 1px solid black;">
+            <td style="border: 1px solid black;">Nguyen Dao</td>
             <td style="border: 1px solid black;"><span style="font-size: 1.2em;"><b>Celebrity Birthday Service</b></span>:<br />
                 <strong>input:<br />
                 </strong>date: string<br />
@@ -215,6 +230,51 @@
                 Return list of celebs born on give date</td>
             <td style="border: 1px solid black;">
                 Web Service</td>
+      </tr>
+      <tr style="border: 1px solid black;">
+            <td style="border: 1px solid black;">Nguyen Dao</td>
+            <td style="border: 1px solid black;"><span style="font-size: 1.2em;"><b>Staff Page</b></span>:<br />
+                <strong>input:<br />
+                </strong>Click events<br />
+                <strong>output:</strong><br />
+                Redirections<td style="border: 1px solid black;">
+                Staff can see the list of staffs, but only the Admin can add new staff</td>
+            <td style="border: 1px solid black;">
+                Staff can see the list of staffs, but only the Admin can add new staff</td>
+            <td style="border: 1px solid black;">
+                Web Page</td>
+      </tr>
+      <tr style="border: 1px solid black;">
+            <td style="border: 1px solid black;">Nguyen Dao</td>
+            <td style="border: 1px solid black;"><span style="font-size: 1.2em;"><b>Staff Log in Page</b></span>:<br />
+                <strong>input:<br />
+                </strong>Username:string<br />
+                password:string<br />
+                click:event<br />
+                <strong>output:</strong><br />
+                Redirection and cookie creation<td style="border: 1px solid black;">
+                Use username: Amin and password: POWER! to gain admin acess<br />
+                Use username: Banana and password:12345 to get gain acess</td>
+            <td style="border: 1px solid black;">
+                Authorize staff and admin</td>
+            <td style="border: 1px solid black;">
+                Web Page</td>
+      </tr>
+      <tr style="border: 1px solid black;">
+            <td style="border: 1px solid black;">Nguyen Dao</td>
+            <td style="border: 1px solid black;"><span style="font-size: 1.2em;"><b>Staff Register Page</b></span>:<br />
+                <strong>input:<br />
+                </strong>Username:string<br />
+                password:string<br />
+                confirmPassword:string<br />
+                click:event<br />
+                <strong>output:</strong><br />
+                Redirection, cookie creation, and XML manipulation<td style="border: 1px solid black;">
+                Only admin get acess to this page.</td>
+            <td style="border: 1px solid black;">
+                Add new staff in Staff.xml</td>
+            <td style="border: 1px solid black;">
+                Web Page</td>
       </tr>
   </tbody></table>
 </asp:Content>
