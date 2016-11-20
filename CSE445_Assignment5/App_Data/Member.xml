@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <users>
   <user>
     <userName>Banana</userName>
@@ -11,5 +11,9 @@
   <user>
     <userName>Wut</userName>
     <password>12345</password>
+  </user>
+  <user>
+    <userName>newuser</userName>
+    <password>&#x5;Á: ä¥sÏƒpXü&#x17;óÂ</password>
   </user>
 </users>
