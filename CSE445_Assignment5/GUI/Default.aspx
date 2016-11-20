@@ -215,7 +215,7 @@
             <td style="border: 1px solid black;">
                 Add a new user to the input xml</td>
             <td style="border: 1px solid black;">
-                DLL Function</td>
+                &nbsp;</td>
       </tr>
       <tr style="border: 1px solid black;">
             <td style="border: 1px solid black;">Nguyen Dao</td>
@@ -253,8 +253,8 @@
                 click:event<br />
                 <strong>output:</strong><br />
                 Redirection and cookie creation<td style="border: 1px solid black;">
-                Use username: Amin and password: POWER! to gain admin acess<br />
-                Use username: Banana and password:12345 to get gain acess</td>
+                Use username: Admin and password: POWER! to gain admin acess<br />
+                Use username: Banana and password:12345 to gain staff acess</td>
             <td style="border: 1px solid black;">
                 Authorize staff and admin</td>
             <td style="border: 1px solid black;">
