@@ -44,6 +44,7 @@
             <div>
                 <div>
                     <h4 ID="H4" runat="server" Text="Alternative Fuel Stations" style="margin-bottom:10px; margin-top:20px; padding-right:50px;">Alternative Fuel Stations</h4>
+                    <h5 ID="H5" runat="server" style="margin-bottom:10px; padding-right:50px;">Service link:<a href="http://webstrar26.fulton.asu.edu/page10/Service1.svc">http://webstrar26.fulton.asu.edu/page10/Service1.svc</a></h5>
                 </div>
                 <asp:Label ID="Label2" runat="server" Text="City:"></asp:Label>
                 <asp:TextBox ID="CityTextBox" runat="server" ></asp:TextBox>
