@@ -208,7 +208,7 @@ namespace TeamLibrary
                     XmlDocument xd = new XmlDocument();
                     xd.Load(fs);
                     fs.Close();
-                    XmlNode node = xd["Staffs"];
+                    XmlNode node = xd["users"];
                     XmlNodeList children = node.ChildNodes;
                     ret = new string[children.Count];
                     int i = 0;

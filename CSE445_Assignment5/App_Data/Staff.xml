@@ -1,6 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <users>
   <user>
+    <userName>Admin</userName>
+    <password>POWER!</password>
+  </user>
+  <user>
     <userName>Banana</userName>
     <password>12345</password>
   </user>
@@ -23,5 +27,9 @@
   <user>
     <userName>OnTop</userName>
     <password>ÿ˜êèíQ5Ýº&#x2;Ç°ÌÑ¹Ü</password>
+  </user>
+  <user>
+    <userName>Nope</userName>
+    <password>N&#x1A;*9¦EäAŒ&#xF;-\,u&#x7;”</password>
   </user>
 </users>

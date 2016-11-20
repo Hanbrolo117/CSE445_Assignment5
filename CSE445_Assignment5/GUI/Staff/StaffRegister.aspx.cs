@@ -29,15 +29,21 @@ namespace CSE445_Assignment5.GUI.Staff
                 string encryptedPassword = TeamLibrary.Crypto.encryption(password);
                 //Insert New User:
                 string fLocation = Path.Combine(HttpRuntime.AppDomainAppPath, @"App_Data\Staff.xml");
-                XMLProccess.addUser(fLocation, username, encryptedPassword);
-                //Create A login Cookie for managing the session:
-                HttpCookie loginCookie = new HttpCookie("staffMember");//Create Staff Cookie.
-                loginCookie["username"] = username;//Set Staff Cookie username.
-                loginCookie.Expires = DateTime.Now.AddMonths(1);//Set Cookie Expiration for 1 month.
-                Response.Cookies.Add(loginCookie);
 
-                alert.Text = "Login Sucess!";
-                Response.Redirect("Staff");
+                if (XMLProccess.findUser(fLocation, username) == null)
+                {
+                    XMLProccess.addUser(fLocation, username, encryptedPassword);
+                    //Create A login Cookie for managing the session:
+                    HttpCookie loginCookie = new HttpCookie("staffMember");//Create Staff Cookie.
+                    loginCookie["username"] = username;//Set Staff Cookie username.
+                    loginCookie.Expires = DateTime.Now.AddMonths(1);//Set Cookie Expiration for 1 month.
+                    Response.Cookies.Add(loginCookie);
+
+                    alert.Text = "Login Sucess!";
+                    Response.Redirect("Staff");
+                }
+                else
+                    alert.Text = "Username already exist";
             }
             else
             {

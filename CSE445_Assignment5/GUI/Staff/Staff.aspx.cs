@@ -6,6 +6,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Text;
+using TeamLibrary;
+using System.IO;
 
 namespace CSE445_Assignment5.Staff
 {
@@ -16,9 +18,17 @@ namespace CSE445_Assignment5.Staff
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Request.Cookies["staffMember"] == null)
+            if ((Request.Cookies["staffMember"] == null) && (Request.Cookies["admin"] == null))
             {
                 Response.Redirect("StaffLogin");
+            }
+
+            txtStaffs.Text = "";
+            string fLocation = Path.Combine(HttpRuntime.AppDomainAppPath, @"App_Data\Staff.xml");
+            string[] userNames = XMLProccess.getUserList(fLocation);
+            foreach(string s in userNames)
+            {
+                txtStaffs.Text += s + "\n";
             }
 
         }
@@ -35,7 +45,10 @@ namespace CSE445_Assignment5.Staff
 
         protected void btnAddStaff_Click(object sender, EventArgs e)
         {
-            Response.Redirect("StaffRegister");
+            if (Request.Cookies["admin"] != null)
+                Response.Redirect("StaffRegister");
+            else
+                Label2.Text = "(Again! Only for admin!)";
         }
 
 

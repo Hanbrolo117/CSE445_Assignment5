@@ -15,7 +15,7 @@ namespace CSE445_Assignment5.components
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if ((Request.Cookies["staffMember"] == null) && (Request.Cookies["member"] == null))
+            if ((Request.Cookies["staffMember"] == null) && (Request.Cookies["member"] == null) && (Request.Cookies["admin"] == null))
             {
                 this.logout_button.Visible = false;
             }
@@ -46,6 +46,13 @@ namespace CSE445_Assignment5.components
                 logoutCookie.Expires = DateTime.Now.AddMonths(-1);
                 Response.Cookies.Add(logoutCookie);
                 memberType = "member";
+            }
+            else if (Request.Cookies["admin"] != null)
+            {
+                HttpCookie logoutCookie = Request.Cookies["admin"];
+                logoutCookie.Expires = DateTime.Now.AddMonths(-1);
+                Response.Cookies.Add(logoutCookie);
+                memberType = "admin";
             }
 
             this.logout_instance(memberType, e);
