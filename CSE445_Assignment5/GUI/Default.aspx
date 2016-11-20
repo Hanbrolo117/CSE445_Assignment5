@@ -163,7 +163,7 @@
             <td style="border: 1px solid black;"><span style="font-size: 1.2em;"><b>Alternative Fuel Stations Services</b></span>:
               <br><b>input:</b><br>city:string<br>state:string<br><b>output:</b><br>e85stations:string<br>
             <td style="border: 1px solid black;">
-                <a href="http://group14.mobicloud.asu.edu/page1/AltFuel.aspx">http://group14.mobicloud.asu.edu/page1/AltFuel.aspx</a>
+                <a href="http://webstrar26.fulton.asu.edu/page10/AltFuel.aspx">http://webstrar26.fulton.asu.edu/page10/AltFuel.aspx</a>
                 <br>
                 Alternatively, sigin as a Member or Staff member and use the service on the member/staff member page.
             </td>
@@ -171,8 +171,71 @@
               <b>getE85</b><br>Calculates how many E85 stations there are in a given city and state.<br>
             </td>
             <td style="border: 1px solid black;">
-                Web Page
+                Web Service
             </td>
+      </tr>
+      
+      <tr style="border: 1px solid black;">
+            <td style="border: 1px solid black;">Khalid Rast</td>
+            <td style="border: 1px solid black;"><span style="font-size: 1.2em;"><b>Member Page</b></span>:<br />
+                <strong>input:<br />
+                </strong>Click events<br />
+                <strong>output:</strong><br />
+                Redirections<td style="border: 1px solid black;">
+                Members can view this page after logging in.</td>
+            <td style="border: 1px solid black;">
+                Member page of three services.</td>
+            <td style="border: 1px solid black;">
+                Web Page</td>
+      </tr>
+      <tr style="border: 1px solid black;">
+            <td style="border: 1px solid black;">Khalid Rast</td>
+            <td style="border: 1px solid black;"><span style="font-size: 1.2em;"><b>Member Log in Page</b></span>:<br />
+                <strong>input:<br />
+                </strong>Username:string<br />
+                password:string<br />
+                click:event<br />
+                <strong>output:</strong><br />
+                Redirection and cookie creation<td style="border: 1px solid black;">
+                Use registered username and passwords to log-in via this page<br />
+                </td>
+            <td style="border: 1px solid black;">
+                Authorize members to access member page</td>
+            <td style="border: 1px solid black;">
+                Web Page</td>
+      </tr>
+      <tr style="border: 1px solid black;">
+            <td style="border: 1px solid black;">Khalid Rast</td>
+            <td style="border: 1px solid black;"><span style="font-size: 1.2em;"><b>Member Register Page</b></span>:<br />
+                <strong>input:<br />
+                </strong>Username:string<br />
+                password:string<br />
+                confirmPassword:string<br />
+                click:event<br />
+                <strong>output:</strong><br />
+                Redirection, cookie creation, and XML manipulation<td style="border: 1px solid black;">
+                Anyone can access this page. Member registration is free for all.</td>
+            <td style="border: 1px solid black;">
+                Add new member in Member.xml</td>
+            <td style="border: 1px solid black;">
+                Web Page</td>
+      </tr>
+          <tr style="border: 1px solid black;">
+            <td style="border: 1px solid black;">Khalid Rast</td>
+            <td style="border: 1px solid black;"><span style="font-size: 1.2em;"><b>Global Asax</b></span>:<br />
+                <strong>input:<br />
+                </strong>None<br />
+                <br />
+                <br />
+                Event Handlers<br />
+                <strong>output:</strong><br />
+                userCount<td style="border: 1px solid black;">
+                To Test, use Application["userCount"].toString() to access usercount based on session starts.</td>
+            <td style="border: 1px solid black;">
+                Global asax file that has three event handlers: ApplicationStart, SessionStart, and SessionClose. Handlers keep track of
+                    userCount based on session start/close. Also registers routetable and bundletable on startup.</td>
+            <td style="border: 1px solid black;">
+                global.asax file</td>
       </tr>
       <tr style="border: 1px solid black;">
             <td style="border: 1px solid black;">Nguyen Dao</td>
