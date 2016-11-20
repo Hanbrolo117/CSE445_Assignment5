@@ -28,6 +28,10 @@ namespace CSE445_Assignment5.GUI
 
             string fLocation = Path.Combine(HttpRuntime.AppDomainAppPath, @"App_Data\Staff.xml");
             XmlNode node = XMLProccess.findUser(fLocation, username);
+            if(!username.Equals("Admin"))
+            {
+                password = Crypto.encryption(password);
+            }
             if (node == null)
             {
                 alert.Text = "User does not exist";
