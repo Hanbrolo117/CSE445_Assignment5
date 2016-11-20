@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<Staffs>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<users>
   <user>
     <userName>Banana</userName>
     <password>12345</password>
@@ -12,4 +12,16 @@
     <userName>Wut</userName>
     <password>12345</password>
   </user>
-</Staffs>
+  <user>
+    <userName>lol</userName>
+    <password>¢d~ÄR%Çªhjßý•Ù</password>
+  </user>
+  <user>
+    <userName>Come</userName>
+    <password>¢uô`=&#x16;bG®&gt;qÂ‹&#x11;ù</password>
+  </user>
+  <user>
+    <userName>OnTop</userName>
+    <password>ÿ˜êèíQ5Ýº&#x2;Ç°ÌÑ¹Ü</password>
+  </user>
+</users>

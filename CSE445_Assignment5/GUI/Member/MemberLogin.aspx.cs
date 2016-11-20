@@ -33,7 +33,7 @@ namespace CSE445_Assignment5.GUI.Member
             //TODO:: ENCRYPT PASSWORD BEFORE COMPARISON
 
             string fLocation = Path.Combine(HttpRuntime.AppDomainAppPath, @"App_Data\Member.xml");
-            XmlNode node = XMLProccess.findMemberUser(fLocation, username);
+            XmlNode node = XMLProccess.findUser(fLocation, username);
             if (node == null)
             {
                 alert.Text = "User does not exist";

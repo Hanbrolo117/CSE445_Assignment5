@@ -4,6 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.IO;
+using System.Xml;
+using TeamLibrary;
 
 namespace CSE445_Assignment5.GUI.Staff
 {
@@ -25,6 +28,8 @@ namespace CSE445_Assignment5.GUI.Staff
             {
                 string encryptedPassword = TeamLibrary.Crypto.encryption(password);
                 //Insert New User:
+                string fLocation = Path.Combine(HttpRuntime.AppDomainAppPath, @"App_Data\Staff.xml");
+                XMLProccess.addUser(fLocation, username, encryptedPassword);
                 //Create A login Cookie for managing the session:
                 HttpCookie loginCookie = new HttpCookie("staffMember");//Create Staff Cookie.
                 loginCookie["username"] = username;//Set Staff Cookie username.
