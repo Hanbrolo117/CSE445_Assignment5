@@ -20,6 +20,10 @@ namespace CSE445_Assignment5.GUI
             {
                 Response.Redirect("Staff");
             }
+            if (Request.Cookies["member"] != null)
+            {
+                Response.Redirect("~/GUI/Member/Member");
+            }
             //------------------------------------------------
 
             //Login Component Subscription:

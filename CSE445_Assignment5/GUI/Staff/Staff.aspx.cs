@@ -18,10 +18,13 @@ namespace CSE445_Assignment5.Staff
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            //Cookie access Control
+            //------------------------------------------------
             if ((Request.Cookies["staffMember"] == null) && (Request.Cookies["admin"] == null))
             {
                 Response.Redirect("StaffLogin");
             }
+            //------------------------------------------------
 
             txtStaffs.Text = "";
             string fLocation = Path.Combine(HttpRuntime.AppDomainAppPath, @"App_Data\Staff.xml");

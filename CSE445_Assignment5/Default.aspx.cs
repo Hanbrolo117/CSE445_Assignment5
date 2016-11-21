@@ -20,11 +20,11 @@ namespace CSE445_Assignment5
         {
             if ((Session["username"] != null) && (Session["password"] != null))
             {
-                Response.Redirect("Member/Member");
+                Response.Redirect("GUI/Member/Member");
             }
             else
             {
-                Response.Redirect("Member/MemberLogin");
+                Response.Redirect("GUI/Member/MemberLogin");
             }
         }
 
@@ -34,16 +34,16 @@ namespace CSE445_Assignment5
         {
             if ((Session["username"] != null) && (Session["password"] != null))
             {
-                Response.Redirect("Staff/Staff");
+                Response.Redirect("GUI/Staff/Staff");
             }
             else {
-                Response.Redirect("Staff/StaffLogin");
+                Response.Redirect("GUI/Staff/StaffLogin");
             }
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            Response.Redirect("CryptionTryIt");
+            Response.Redirect("GUI/CryptionTryIt");
         }
     }
 }

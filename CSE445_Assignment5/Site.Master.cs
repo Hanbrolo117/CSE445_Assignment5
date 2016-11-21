@@ -75,14 +75,14 @@ namespace CSE445_Assignment5
         //Logout Event Handler:
         //------------------------------------------------
         public void LogoutHandler(string membertype, EventArgs e) {
-            Response.Redirect("~/GUI/");
+            Response.Redirect("~/");
         }
 
         //Home Page Button:
         //------------------------------------------------
         protected void home_button_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/GUI/");
+            Response.Redirect("~/");
         }
 
 

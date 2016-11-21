@@ -19,6 +19,10 @@ namespace CSE445_Assignment5.GUI.Member
             if (Request.Cookies["member"] != null) {
                 Response.Redirect("Member.aspx");
             }
+            else if (Request.Cookies["staffMember"] != null)
+            {
+                Response.Redirect("~/GUI/Staff/Staff");
+            }
             //------------------------------------------------
 
 
