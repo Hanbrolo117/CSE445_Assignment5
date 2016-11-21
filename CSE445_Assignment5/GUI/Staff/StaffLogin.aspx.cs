@@ -37,7 +37,11 @@ namespace CSE445_Assignment5.GUI
             //TODO:: ENCRYPT PASSWORD BEFORE COMPARISON
 
             string fLocation = Path.Combine(HttpRuntime.AppDomainAppPath, @"App_Data\Staff.xml");
-            XmlNode node = XMLProccess.findStaffUser(fLocation, username);
+            XmlNode node = XMLProccess.findUser(fLocation, username);
+            if(!username.Equals("Admin"))
+            {
+                password = Crypto.encryption(password);
+            }
             if (node == null)
             {
                 alert.Text = "User does not exist";
@@ -49,7 +53,14 @@ namespace CSE445_Assignment5.GUI
             else
             {
                 //Create A login Cookie for managing the session:
-                HttpCookie loginCookie = new HttpCookie("staffMember");//Create Staff Cookie.
+                HttpCookie loginCookie;
+                if (username.Equals("Admin"))
+                {
+                    loginCookie = new HttpCookie("admin");//Create Staff Cookie.
+                }
+                else
+                    loginCookie = new HttpCookie("staffMember");
+
                 loginCookie["username"] = username;//Set Staff Cookie username.
                 loginCookie.Expires = DateTime.Now.AddMonths(1);//Set Cookie Expiration for 1 month.
                 Response.Cookies.Add(loginCookie);
@@ -63,7 +74,10 @@ namespace CSE445_Assignment5.GUI
         //------------------------------------------------
         public void RegisterHandler(string username, string password, EventArgs e)
         {
-            Response.Redirect("StaffRegister");
+            if (Request.Cookies["admin"] != null)
+                Response.Redirect("StaffRegister");
+            else
+                alert.Text = "Only Admin can add new staff!";
         }
     }
 }

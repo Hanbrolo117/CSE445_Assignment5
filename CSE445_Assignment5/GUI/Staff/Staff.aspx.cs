@@ -6,6 +6,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Text;
+using TeamLibrary;
+using System.IO;
 
 namespace CSE445_Assignment5.Staff
 {
@@ -16,18 +18,22 @@ namespace CSE445_Assignment5.Staff
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            //Cookie Access Control
-            //------------------------------------------------
-            if (Request.Cookies["staffMember"] == null)
+            if ((Request.Cookies["staffMember"] == null) && (Request.Cookies["admin"] == null))
             {
                 Response.Redirect("StaffLogin");
             }
-            //------------------------------------------------
+
+            txtStaffs.Text = "";
+            string fLocation = Path.Combine(HttpRuntime.AppDomainAppPath, @"App_Data\Staff.xml");
+            string[] userNames = XMLProccess.getUserList(fLocation);
+            foreach(string s in userNames)
+            {
+                txtStaffs.Text += s + "\n";
+            }
+
         }
 
         public void logoutHandler(string memberType, EventArgs e) {
-            //Authentication Control
-            //------------------------------------------------
             if (memberType.Equals("staff"))
             {
                 Response.Redirect("StaffLogin");
@@ -35,19 +41,17 @@ namespace CSE445_Assignment5.Staff
             else if (memberType.Equals("member")) {
                 Response.Redirect("~/Member/MemberLogin.aspx");
             }
-            //------------------------------------------------
         }
 
         protected void btnAddStaff_Click(object sender, EventArgs e)
         {
-            //Redirection Control
-            //------------------------------------------------
-            Response.Redirect("StaffRegister");
-            //------------------------------------------------
+            if (Request.Cookies["admin"] != null)
+                Response.Redirect("StaffRegister");
+            else
+                Label2.Text = "(Again! Only for admin!)";
         }
 
 
-        //Weather Service Web Service Use!
         protected void get_local_weather_Click(object sender, EventArgs e)
         {
             WeatherService.WeatherServiceClient weatherService = new WeatherService.WeatherServiceClient();

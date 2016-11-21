@@ -1,8 +1,12 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<Staffs>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<users>
+  <user>
+    <userName>Admin</userName>
+    <password>POWER!</password>
+  </user>
   <user>
     <userName>Banana</userName>
-    <password>12345</password>
+    <password>(°î¢Iš¡_×]&#x14;Ð&#x5;)¼</password>
   </user>
   <user>
     <userName>Apple</userName>
@@ -12,4 +16,24 @@
     <userName>Wut</userName>
     <password>12345</password>
   </user>
-</Staffs>
+  <user>
+    <userName>lol</userName>
+    <password>¢d~ÄR%Çªhjßý•Ù</password>
+  </user>
+  <user>
+    <userName>Come</userName>
+    <password>¢uô`=&#x16;bG®&gt;qÂ‹&#x11;ù</password>
+  </user>
+  <user>
+    <userName>OnTop</userName>
+    <password>ÿ˜êèíQ5Ýº&#x2;Ç°ÌÑ¹Ü</password>
+  </user>
+  <user>
+    <userName>Nope</userName>
+    <password>N&#x1A;*9¦EäAŒ&#xF;-\,u&#x7;”</password>
+  </user>
+  <user>
+    <userName>bandana</userName>
+    <password>(°î¢Iš¡_×]&#x14;Ð&#x5;)¼</password>
+  </user>
+</users>

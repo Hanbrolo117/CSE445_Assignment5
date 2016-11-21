@@ -4,6 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.IO;
+using System.Xml;
+using TeamLibrary;
 
 namespace CSE445_Assignment5.GUI.Staff
 {
@@ -34,14 +37,22 @@ namespace CSE445_Assignment5.GUI.Staff
             {
                 string encryptedPassword = TeamLibrary.Crypto.encryption(password);
                 //Insert New User:
-                //Create A login Cookie for managing the session:
-                HttpCookie loginCookie = new HttpCookie("staffMember");//Create Staff Cookie.
-                loginCookie["username"] = username;//Set Staff Cookie username.
-                loginCookie.Expires = DateTime.Now.AddMonths(1);//Set Cookie Expiration for 1 month.
-                Response.Cookies.Add(loginCookie);
+                string fLocation = Path.Combine(HttpRuntime.AppDomainAppPath, @"App_Data\Staff.xml");
 
-                alert.Text = "Login Sucess!";
-                Response.Redirect("Staff");
+                if (XMLProccess.findUser(fLocation, username) == null)
+                {
+                    XMLProccess.addUser(fLocation, username, encryptedPassword);
+                    //Create A login Cookie for managing the session:
+                    HttpCookie loginCookie = new HttpCookie("staffMember");//Create Staff Cookie.
+                    loginCookie["username"] = username;//Set Staff Cookie username.
+                    loginCookie.Expires = DateTime.Now.AddMonths(1);//Set Cookie Expiration for 1 month.
+                    Response.Cookies.Add(loginCookie);
+
+                    alert.Text = "Login Sucess!";
+                    Response.Redirect("Staff");
+                }
+                else
+                    alert.Text = "Username already exist";
             }
             else
             {

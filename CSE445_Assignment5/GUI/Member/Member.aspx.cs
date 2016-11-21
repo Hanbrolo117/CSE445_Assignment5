@@ -89,5 +89,30 @@ namespace CSE445_Assignment5.GUI.Member
             StationsTextBox.Text = altfuel.ProcessResponse(CityTextBox.Text, StateTextBox.Text);
 
         }
+
+        protected void btnSubmit_Click(object sender, EventArgs e)
+        {
+            txtResult.Text = "";
+            CelebBirthdaySVC.CelebBirthdayClient celebC = new CelebBirthdaySVC.CelebBirthdayClient();
+            string[] result;
+            int mo = 0;
+            try
+            {
+                mo = Convert.ToInt32((txtMaxOutput.Text));
+            }
+            catch
+            {
+                txtResult.Text = "Invalid Max Output";
+            }
+
+            result = celebC.bornOn(txtDate.Text, mo);
+
+            for (int i = 0; i < result.Count(); i++)
+            {
+                if (result[i] == "")
+                    break;
+                txtResult.Text += (i + 1) + ") " + result[i] + "\n";
+            }
+        }
     }
 }

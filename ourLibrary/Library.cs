@@ -129,8 +129,7 @@ namespace TeamLibrary
 
     public class XMLProccess
     {
-
-        public static XmlNode findMemberUser(string XMLPath, string username)
+        public static void addUser(string XMLPath, string userName, string encryptedPass)
         {
             FileStream fs = null;
             XmlNode node = null;
@@ -142,7 +141,47 @@ namespace TeamLibrary
                     XmlDocument xd = new XmlDocument();
                     xd.Load(fs);
                     fs.Close();
-                    node = xd["Members"];
+                    node = xd["users"];
+
+                    if (node != null)
+                    {
+                        XmlNode newUserNode = xd.CreateNode(XmlNodeType.Element, "user", null);
+                        XmlNode newUserNameNode = xd.CreateNode(XmlNodeType.Element, "userName", null);
+                        XmlNode newPasswordNode = xd.CreateNode(XmlNodeType.Element, "password", null);
+
+                        newUserNameNode.InnerText = userName;
+                        newPasswordNode.InnerText = encryptedPass;
+
+                        newUserNode.AppendChild(newUserNameNode);
+                        newUserNode.AppendChild(newPasswordNode);
+                        node.AppendChild(newUserNode);
+                    }
+
+                    File.Delete(XMLPath);
+                    fs = new FileStream(XMLPath, FileMode.Create, FileAccess.Write);
+                    xd.Save(fs);
+                    fs.Close();
+                }
+            }
+            finally
+            {
+                fs.Close();
+            }
+        }
+
+        public static XmlNode findUser(string XMLPath, string username)
+        {
+            FileStream fs = null;
+            XmlNode node = null;
+            try
+            {
+                if (File.Exists(XMLPath))
+                {
+                    fs = new FileStream(XMLPath, FileMode.Open, FileAccess.Read);
+                    XmlDocument xd = new XmlDocument();
+                    xd.Load(fs);
+                    fs.Close();
+                    node = xd["users"];
                     node = node.SelectSingleNode("descendant::user/userName[text()='" + username + "']");
                     if (node != null)
                         node = node.ParentNode;
@@ -155,30 +194,6 @@ namespace TeamLibrary
             return node;
         }
 
-        public static XmlNode findStaffUser(string XMLPath, string username)
-        {
-            FileStream fs = null;
-            XmlNode node = null;
-            try
-            {
-                if (File.Exists(XMLPath))
-                {
-                    fs = new FileStream(XMLPath, FileMode.Open, FileAccess.Read);
-                    XmlDocument xd = new XmlDocument();
-                    xd.Load(fs);
-                    fs.Close();
-                    node = xd["Staffs"];
-                    node = node.SelectSingleNode("descendant::user/userName[text()='" + username + "']");
-                    if (node != null)
-                        node = node.ParentNode;
-                }
-            }
-            finally
-            {
-                fs.Close();
-            }
-            return node;
-        }
         //return array of string. First element will be "Error" if error occur
         public static string[] getUserList(string XMLPath)
         {
@@ -193,7 +208,7 @@ namespace TeamLibrary
                     XmlDocument xd = new XmlDocument();
                     xd.Load(fs);
                     fs.Close();
-                    XmlNode node = xd["Staffs"];
+                    XmlNode node = xd["users"];
                     XmlNodeList children = node.ChildNodes;
                     ret = new string[children.Count];
                     int i = 0;

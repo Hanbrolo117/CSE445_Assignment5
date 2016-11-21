@@ -44,6 +44,7 @@
             <div>
                 <div>
                     <h4 ID="H4" runat="server" Text="Alternative Fuel Stations" style="margin-bottom:10px; margin-top:20px; padding-right:50px;">Alternative Fuel Stations</h4>
+                    <h5 ID="H5" runat="server" style="margin-bottom:10px; padding-right:50px;">Service link:<a href="http://webstrar26.fulton.asu.edu/page10/Service1.svc">http://webstrar26.fulton.asu.edu/page10/Service1.svc</a></h5>
                 </div>
                 <asp:Label ID="Label2" runat="server" Text="City:"></asp:Label>
                 <asp:TextBox ID="CityTextBox" runat="server" ></asp:TextBox>
@@ -56,6 +57,22 @@
             </div>
                 <asp:Button ID="ProcessButton" runat="server" Text="Process" OnClick="ProcessButton_Click" />
         </div>
+
+        <br />
+        
+        <div>
+            <h4>CELEBRITY BIRTHDAY SERVICE</h4>
+            Service link:<a href="http://webstrar26.fulton.asu.edu/page5/CelebBirthday.svc">http://webstrar26.fulton.asu.edu/page5/CelebBirthday.svc</a><br />
+            Find
+            <asp:TextBox ID="txtMaxOutput" runat="server" Width="28px"></asp:TextBox>&nbsp;(max number) celebritie(s) born of:
+            <asp:TextBox ID="txtDate" runat="server" Width="98px"></asp:TextBox>&nbsp;&nbsp; (mm/dd/yyyy)&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Button ID="btnSubmit" runat="server" OnClick="btnSubmit_Click" Text="Submit" />
+            <br />
+    
+        
+            <asp:TextBox ID="txtResult" runat="server" Enabled="False" Height="222px" TextMode="MultiLine" Width="479px"></asp:TextBox>
+        </div>
+
 
         </div>
 

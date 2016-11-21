@@ -41,27 +41,28 @@ namespace CSE445_Assignment5.GUI.Member
         //Login Component (Signin) Event Handler:
         //------------------------------------------------
         public void LoginHandler(string username, string password, EventArgs e) {
-            //TODO:: ENCRYPT PASSWORD BEFORE COMPARISON
+            //ENCRYPT PASSWORD BEFORE COMPARISON
+            string encryptedPassword = TeamLibrary.Crypto.encryption(password);
 
             string fLocation = Path.Combine(HttpRuntime.AppDomainAppPath, @"App_Data\Member.xml");
-            XmlNode node = XMLProccess.findMemberUser(fLocation, username);
+            XmlNode node = XMLProccess.findUser(fLocation, username);
             if (node == null)
             {
                 alert.Text = "User does not exist";
             }
-            else if (string.Compare(node["password"].InnerText, password) != 0)
+            else if (string.Compare(node["password"].InnerText, encryptedPassword) != 0)
             {
                 alert.Text = "wrong Password";
             }
             else
             {
                 //Create A login Cookie for managing the session:
-                HttpCookie loginCookie = new HttpCookie("member");//Create Staff Cookie.
-                loginCookie["username"] = username;//Set Staff Cookie username.
+                HttpCookie loginCookie = new HttpCookie("member");//Create Member Cookie.
+                loginCookie["username"] = username;//Set Member Cookie username.
                 loginCookie.Expires = DateTime.Now.AddMonths(1);//Set Cookie Expiration for 1 month.
                 Response.Cookies.Add(loginCookie);
 
-                alert.Text = "Login Sucess!";
+                alert.Text = "Login Success!";
                 Response.Redirect("Member");
             }
         }
