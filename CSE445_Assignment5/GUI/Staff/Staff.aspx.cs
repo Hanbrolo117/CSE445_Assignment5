@@ -16,14 +16,18 @@ namespace CSE445_Assignment5.Staff
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            //Cookie Access Control
+            //------------------------------------------------
             if (Request.Cookies["staffMember"] == null)
             {
                 Response.Redirect("StaffLogin");
             }
-
+            //------------------------------------------------
         }
 
         public void logoutHandler(string memberType, EventArgs e) {
+            //Authentication Control
+            //------------------------------------------------
             if (memberType.Equals("staff"))
             {
                 Response.Redirect("StaffLogin");
@@ -31,14 +35,19 @@ namespace CSE445_Assignment5.Staff
             else if (memberType.Equals("member")) {
                 Response.Redirect("~/Member/MemberLogin.aspx");
             }
+            //------------------------------------------------
         }
 
         protected void btnAddStaff_Click(object sender, EventArgs e)
         {
+            //Redirection Control
+            //------------------------------------------------
             Response.Redirect("StaffRegister");
+            //------------------------------------------------
         }
 
 
+        //Weather Service Web Service Use!
         protected void get_local_weather_Click(object sender, EventArgs e)
         {
             WeatherService.WeatherServiceClient weatherService = new WeatherService.WeatherServiceClient();

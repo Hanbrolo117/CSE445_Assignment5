@@ -21,7 +21,7 @@
     <div class="row" style="margin-top:30px;">
         <div class="col-md-12">
           <h1>Group 14 Web app Services & Controls</h1>
-          <h4>This page is deployed at: <a href="">TODO: add link here once link is determined</a></h4>
+          <!--<h4>This page is deployed at: <a href="">TODO: add link here once link is determined</a></h4>-->
           <h4>This project is developed By: Kyle Ferguson, Nguyen Dao, and Khalid Rast</h4>
         </div>
 
@@ -30,7 +30,7 @@
       <tbody><tr style="border: 1px solid black; background-color: gray; color: white;">
         <th style="border-left: 1px solid black; border-right: 1px solid black;">Provider Name</th>
         <th style="border-left: 1px solid black; border-right: 1px solid black;">Service Name with output types</th>
-        <th style="border-left: 1px solid black; border-right: 1px solid black;">TryIt Link</th>
+        <th style="border-left: 1px solid black; border-right: 1px solid black;">TryIt Link Or Integrated Use</th>
         <th style="border-left: 1px solid black; border-right: 1px solid black;">Service Description</th>
         <th style="border-left: 1px solid black; border-right: 1px solid black;">Type</th>
       </tr>
@@ -98,6 +98,38 @@
           User Control Component.
         </td>
       </tr>
+
+    <tr style="border: 1px solid black;">
+            <td style="border: 1px solid black;">Kyle Ferguson</td>
+            <td style="border: 1px solid black;"><span style="font-size: 1.2em;">
+              <b>Encryption/Decryption</b></span>:
+              <br>
+              <b>encryption</b>
+              <b>input:</b><br>
+              plaintext:String<br>
+              <b>output:<br>
+              </b>ciphertext:String<br>
+              <b>decryption</b>
+              <b>input:</b><br>
+              ciphertext:String<br>
+              <b>output:<br>
+              </b>plaintext:String<br>
+            </td>
+            <td style="border: 1px solid black;">
+              To test, make sure you are logged out. Then click the "Members" or "Staff" button. You will be redirected to a signin page at which point you will press the Register button from the signin component and
+              you will then be redirected to the Respective Member type's register page at which point you can test the Register Component. Or You can simply use the sigin form. Either will use the encryption and decryption function.
+                Alternatively, Since this is a behind the scenes function, you can click the button to go to it's tryit page to see the functions in action.
+                <br />
+                <asp:Button ID="Button1" runat="server" Text="Try-It >>" style="margin-bottom:10px; margin-top:20px; padding-right:50px; text-align:center;" OnClick="Button1_Click" />
+
+            </td>
+            <td style="border: 1px solid black;">
+              This Library enables developers to safely encrypt user data or any other sensitive data that the developers need encrypted. Further, with this library they have the means to decrypt their encrypted data. 
+            </td>
+            <td style="border: 1px solid black;">
+              DLL
+            </td>
+    </tr>
 
       <tr>
         <td style="border: 1px solid black;">Kyle Ferguson</td>
@@ -171,7 +203,7 @@
               <b>getE85</b><br>Calculates how many E85 stations there are in a given city and state.<br>
             </td>
             <td style="border: 1px solid black;">
-                Web Page
+                Web Service (Created by khalid Rast) from Assignment 3.
             </td>
       </tr>
   </tbody></table>

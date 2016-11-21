@@ -9,12 +9,15 @@ namespace CSE445_Assignment5.components
 {
     public partial class Logout : System.Web.UI.UserControl
     {
+        //Event Stuff:
         public delegate void LogoutEvent(string membertype, EventArgs e);
         public event LogoutEvent logout_instance;
         
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            //Cookie Access Control:
+            //------------------------------------------------
             if ((Request.Cookies["staffMember"] == null) && (Request.Cookies["member"] == null))
             {
                 this.logout_button.Visible = false;
@@ -22,15 +25,19 @@ namespace CSE445_Assignment5.components
             else {
                 this.logout_button.Visible = true;
             }
+            //------------------------------------------------
         }
 
+        //Logout Event Subscription Adder:
+        //------------------------------------------------
         public void subscribeToLogoutButton(Action<string, EventArgs> app_handler)
         {
             //Subscribe to a register event:
             this.logout_instance += new LogoutEvent(app_handler);
         }
 
-
+        //Logout Event Emitter:
+        //------------------------------------------------
         protected void logout_button_Click(object sender, EventArgs e)
         {
             string memberType = "";

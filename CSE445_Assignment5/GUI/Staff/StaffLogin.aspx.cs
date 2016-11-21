@@ -14,14 +14,24 @@ namespace CSE445_Assignment5.GUI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //Cookie access Control
+            //------------------------------------------------
             if (Request.Cookies["staffMember"] != null)
             {
                 Response.Redirect("Staff");
             }
+            //------------------------------------------------
+
+            //Login Component Subscription:
+            //------------------------------------------------
             this.signIn.subscribeToLoginButton(this.LoginHandler);
             this.signIn.subscribeToRegisterButton(this.RegisterHandler);
+            //------------------------------------------------
         }
 
+
+        //Login Component (Signin) Event Handler:
+        //------------------------------------------------
         public void LoginHandler(string username, string password, EventArgs e)
         {
             //TODO:: ENCRYPT PASSWORD BEFORE COMPARISON
@@ -49,6 +59,8 @@ namespace CSE445_Assignment5.GUI
             }
         }
 
+        //Login Component (Register) Event Handler:
+        //------------------------------------------------
         public void RegisterHandler(string username, string password, EventArgs e)
         {
             Response.Redirect("StaffRegister");

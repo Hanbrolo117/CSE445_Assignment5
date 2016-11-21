@@ -14,11 +14,8 @@ namespace CSE445_Assignment5
 
         }
 
-        public void logoutHandler(string memberType, EventArgs e) {
-            Response.Redirect("Default");
-        }
-
-
+        //Member Page Button:
+        //------------------------------------------------
         protected void member_button_Click(object sender, EventArgs e)
         {
             if ((Session["username"] != null) && (Session["password"] != null))
@@ -31,6 +28,8 @@ namespace CSE445_Assignment5
             }
         }
 
+        //Staff Page Button:
+        //------------------------------------------------
         protected void staff_button_Click(object sender, EventArgs e)
         {
             if ((Session["username"] != null) && (Session["password"] != null))
@@ -40,6 +39,11 @@ namespace CSE445_Assignment5
             else {
                 Response.Redirect("Staff/StaffLogin");
             }
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("CryptionTryIt");
         }
     }
 }

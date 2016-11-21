@@ -9,6 +9,7 @@ namespace CSE445_Assignment5
 {
     public partial class signIn : System.Web.UI.UserControl
     {
+        //Event Stuff:
         public delegate void Login(string username, string password, EventArgs e);
         public event Login login_instance;
         public event Login register_instance;

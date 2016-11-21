@@ -185,6 +185,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="components\Logout.ascx" />
+    <Content Include="GUI\CryptionTryIt.aspx" />
     <Content Include="GUI\About.aspx" />
     <Content Include="Account\AddPhoneNumber.aspx" />
     <Content Include="Account\Confirm.aspx" />
@@ -418,6 +419,13 @@
     </Compile>
     <Compile Include="components\Logout.ascx.designer.cs">
       <DependentUpon>Logout.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\CryptionTryIt.aspx.cs">
+      <DependentUpon>CryptionTryIt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\CryptionTryIt.aspx.designer.cs">
+      <DependentUpon>CryptionTryIt.aspx</DependentUpon>
     </Compile>
     <Compile Include="GUI\About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>

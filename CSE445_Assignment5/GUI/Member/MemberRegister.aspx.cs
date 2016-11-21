@@ -11,14 +11,22 @@ namespace CSE445_Assignment5.GUI.Member
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //Cookie access Control:
+            //------------------------------------------------
             if (Request.Cookies["member"] != null)
             {
                 Response.Redirect("Member.aspx");
             }
+            //------------------------------------------------
+
+            //Register Component Subscription:
+            //------------------------------------------------
             this.Register.subscribeToRegisterButton(this.RegisterHandler);
+            //------------------------------------------------
         }
 
-
+        //Register Component Event Handler:
+        //------------------------------------------------
         public void RegisterHandler(string username, string password, string confirmPassword, EventArgs e) {
             if (password.Equals(confirmPassword))
             {

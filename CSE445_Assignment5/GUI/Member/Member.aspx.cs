@@ -17,13 +17,17 @@ namespace CSE445_Assignment5.GUI.Member
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            //Cookie access Control:
+            //------------------------------------------------
             if (Request.Cookies["member"] == null) {
                 Response.Redirect("MemberLogin.aspx");
             }
+            //------------------------------------------------
         }
 
 
-
+        //Weather Service Web Service use!
+        //------------------------------------------------
         protected void get_local_weather_Click(object sender, EventArgs e)
         {
             WeatherService.WeatherServiceClient weatherService = new WeatherService.WeatherServiceClient();
@@ -77,6 +81,7 @@ namespace CSE445_Assignment5.GUI.Member
                 }
             }
         }
+
 
         protected void ProcessButton_Click(object sender, EventArgs e)  //Processes Alt Fuel Service Request
         {

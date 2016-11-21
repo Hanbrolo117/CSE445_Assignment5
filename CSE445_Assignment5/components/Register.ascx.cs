@@ -9,7 +9,7 @@ namespace CSE445_Assignment5
 {
     public partial class Register : System.Web.UI.UserControl
     {
-
+        //Event Stuff:
         public delegate void RegisterEvent(string username, string password, string confirmPassword, EventArgs e);
         public event RegisterEvent register_instance;
 
